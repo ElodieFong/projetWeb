@@ -321,6 +321,26 @@ legend {
   border: none;
 }
 
+#miam h2{
+  text-align: left;
+  font-weight: normal;
+  text-decoration: underline;
+}
+
+#miam .illustration{
+  display: flex;
+  flex-wrap: wrap;
+  min-width: 800px;
+  gap: 2em;
+}
+
+#miam .illustration h1 {
+  margin-top: 11em;
+  text-align: left;
+  margin-left:0;
+  unicode-bidi: isolate;
+}
+
 
 /*bubulle*/
 .bubbles {
