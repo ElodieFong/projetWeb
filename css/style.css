@@ -1,0 +1,433 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #00a3ad;
+  background-size:auto;
+  padding-top: 200px;
+}
+
+
+header, footer {
+  background: #00a3ad;
+  padding: 1em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer{
+  border-top-style: solid;
+  background-color: rgba(0,163, 173, 0.3);
+}
+
+header {
+  background-image: url("../img/invasive2.avif");
+  background-size:auto;
+  background-position: center;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; 
+  padding: 1em;
+  background-repeat: no-repeat;
+  position: fixed;
+  top: 0;
+  left:0;
+  width: 100%;
+  z-index: 1000;;
+  border-bottom-style: solid;
+  border-width: 2px;
+  border-color: rgb(93, 213, 60);
+}
+
+.top-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.bande {
+  display: flex;
+  justify-content: center;
+  gap: 1em;
+  margin-top: auto;
+  background-color: rgba(12, 115, 179, 0.6);
+  padding: 15px;
+  padding-left:100px;
+  padding-right: 100px;
+  border-radius: 25px;
+  border-color: black;
+  border-width: 15px;
+}
+
+
+nav a {
+  margin: 0 10px;
+  text-decoration: none;
+  color: rgb(255, 255, 255);
+  padding: 5px;
+  border-radius: 5px;
+}
+
+
+section.fiche {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 3em;
+  margin-top: 2em;
+  padding: 1em;
+}
+
+
+.btn-connexion {
+  background: black;
+  color: white;
+  border: none;
+  padding: 0.5em;
+  border-radius: 5px;
+}
+
+main {
+  padding: 2em;
+  overflow-y: scroll;
+  overflow: hidden;
+  max-height: 100%;
+  margin-right: 10%;
+  margin-left: 10%;
+  background-color: transparent;
+}
+
+section.fiche, .echelle section {
+  display: flex;
+  justify-content: center;
+  gap: 2em;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.img-col {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+
+.img {
+  width: 220px;
+  height: auto;
+  background: lightgray;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+
+.texte {
+  max-width: 400px;
+  text-align: left;
+  font-size: 1em;
+  line-height: 1.5em;
+}
+
+
+table {
+  width: 100%;
+  border-spacing: 0.5em;
+}
+
+.info {
+  font-weight: bold;
+  text-align: right;
+  vertical-align: top;
+  padding-right: 0.5em;
+}
+
+a {
+  color: blue;
+}
+
+.bloc {
+  border: 1px solid #aaa;
+  border-radius: 5px;
+  padding: 1em;
+  margin: 1em auto;
+  max-width: 600px;
+}
+
+.grid-vf {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1em;
+}
+
+footer {
+  font-size: 0.8em;
+  justify-content: space-around;
+  margin-top: 2em;
+}
+
+footer .socials span {
+  margin: 0 5px;
+}
+
+
+
+
+
+h1 {
+  text-align: center;
+}
+
+.grid {
+  display: grid;
+  margin: 20px;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 15px;
+  text-align: center;
+}
+
+
+.item {
+  font-size: 14px;
+}
+
+.box{
+  width: 60%;
+  margin: 50px auto 50px auto;
+  background-color: #00c8d37f;
+  padding: 10px;
+  border: 2px solid black;
+  border-radius: 8px;
+}
+
+.questions, li {
+  margin: 10px 0;
+  list-style: none;
+}
+
+textarea {
+  height: 300px;
+  width: 95%;
+  margin: 20px;
+  background-color: rgba(255, 255, 255, 0.75);
+}
+
+::placeholder {
+  color: #fa581d
+}
+
+.result{
+  width: 100%;
+  border-collapse: collapse;
+  border: 2px solid black;
+}
+
+.envoi {
+  background-color: black;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  margin: 0 auto;
+  display: block;
+  width: 150px;
+}
+
+#quiz {
+  width: 100%;
+  border-collapse: collapse;
+  border: 2px solid black;
+} 
+
+legend {
+  background: #01f2ff7f;
+  border-radius: 8px;
+  border: 2px solid black;
+}
+
+.lien {
+  text-align: center;
+}
+
+.logo {
+  height: 100px;
+  width: 100px;
+}
+
+#titre {
+  color: white;
+  font-weight: bold;
+  margin-top: 0;
+  padding-top: 0;
+}
+
+.detail {
+  text-align: left;
+  background: #00c8d37f;
+  border-radius: 8px;
+  border: 2px solid #00c8d3;
+  margin: 20px;
+  padding: 10px;
+}
+
+#ecranGame {
+  width: auto;
+  height: 400px;
+  background-color: #cceeff;
+  position: relative;
+  margin: 20px auto;
+  border: 2px solid black;
+  overflow: hidden;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+
+
+.ecrevisse {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+.ecrevisse:hover {
+  transform: scale(1.1);
+}
+
+#aPropos {
+  display: flex;
+  border-style: solid;
+  text-align: left;
+  max-width: fit-content;
+  margin: auto;
+  border-collapse: collapse;
+}
+#aPropos td{
+  border-style: solid;      /* Bordure entre cellules */
+  text-align: left;
+  padding: 3px 10px 3px 10px;
+  
+}
+
+#aPropos .left{
+  text-align: right;
+}
+
+
+/*bubulle*/
+.bubbles {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  overflow: hidden;
+  z-index: -1;
+}
+.bubble {
+  position: absolute;
+  bottom: -100px;
+  width: 40px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  animation: floatUp 10s infinite ease-in;
+}
+
+@keyframes floatUp {
+  0% {
+    transform:translateY(0) scale(1);
+    opacity:0.6;
+  }
+  50% {
+    opacity:1;
+  }
+  100% {
+    transform:translateY(-110vh) scale(1.2);
+    opacity:0;
+  }
+}
+
+.bubble:first-child{
+  left: 10%;
+  animation-duration: 8s;
+  width: 30px;
+  height: 30px;
+}
+
+.bubble:nth-child(2){
+  left: 5%;
+  animation-duration: 15s;
+  width: 25px;
+  height: 25px;
+}
+
+.bubble:nth-child(3){
+  right: 8%;
+  animation-duration: 10s;
+  width: 25px;
+  height: 25px;
+}
+
+.bubble:nth-child(4){
+  right: 10%;
+  animation-duration: 7s;
+  width: 30px;
+  height: 30px;
+}
+.bubble:nth-child(5){
+  right: 5%;
+  animation-duration: 12s;
+  width: 22px;
+  height: 22px;
+}
+
+.bubble:nth-child(6){
+  left: 8%;
+  animation-duration: 6s;
+  width: 22px;
+  height: 22px;
+}
+
+.bubble:nth-child(7){
+  right: 40%;
+  animation-duration: 10s;
+  width: 20px;
+  height: 20px;
+}
+
+.bubble:nth-child(8){
+  right: 35%;
+  animation-duration: 17s;
+  width: 15px;
+  height: 15px;
+}
+
+.bubble:nth-child(9){
+  left: 38%;
+  animation-duration: 12s;
+  width: 15px;
+  height: 15px;
+}
+
+.bubble:nth-child(10){
+  left: 40%;
+  animation-duration: 9s;
+  width: 20px;
+  height: 20px;
+}
+.bubble:nth-child(11){
+  left: 35%;
+  animation-duration: 14s;
+  width: 12px;
+  height: 12px;
+}
+
+.bubble:nth-child(12){
+  right: 28%;
+  animation-duration: 7s;
+  width: 12px;
+  height: 12px;
+}

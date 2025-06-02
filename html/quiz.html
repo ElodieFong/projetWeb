@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <title>châtrer l'écrevisse</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Quiz</title>
+        <link rel="stylesheet" type="text/css" href="../css/style.css">
+    </head>
+    <body>
+        <header>
+            <div class="top-header">
+                <img class="logo" src="../img/heroictoken_1.png" alt="logo">
+            </div>
+            <p id="titre" color="white" >Chatrer l’Ecrevisse</p>
+               
+            <nav class="bande">
+                <a href="accueil.html">accueil</a>
+                <a href="quiz.html">quiz</a>
+                <a href="jeu.html">jeu</a>
+                <a href="apropos.html">a propos</a>
+            </nav>
+        </header>
+
+        <main>
+        <h1>Quiz : Écrevisse de Louisiane</h1>
+    <form>
+        <fieldset class="box">
+            <legend>Que savez-vous de l'écrevisse de Louisiane ?</legend>
+            <ol>
+                <li>Quelle est l’origine géographique de l’écrevisse de Louisiane ?
+                    <ul class="questions">
+                        <li><input type="radio" id="q1a" name="q1" value="a">
+                            <label for="q1a" class="btn_radio">Europe de l’Ouest</label></li>
+                        <li><input type="radio" id="q1b" name="q1" value="b">
+                            <label for="q1b" class="btn_radio">Sud-Est des États-Unis</label></li>
+                        <li><input type="radio" id="q1c" name="q1" value="c">
+                            <label for="q1c" class="btn_radio">Asie du Sud-Est</label></li>
+                    </ul>
+                </li>
+
+                <li>Pourquoi l’écrevisse de Louisiane est-elle considérée comme invasive ?
+                    <ul class="questions">
+                        <li><input type="checkbox" id="q2a" name="q2[]" value="a">
+                            <label for="q2a" class="btn_check">Elle détruit les habitats naturels.</label></li>
+                        <li><input type="checkbox" id="q2b" name="q2[]" value="b">
+                            <label for="q2b" class="btn_check">Elle améliore la qualité de l’eau.</label></li>
+                        <li><input type="checkbox" id="q2c" name="q2[]" value="c">
+                            <label for="q2c" class="btn_check">Elle entre en compétition avec les espèces locales.</label></li>
+                    </ul>
+                </li>
+
+                <li>Quel est le régime alimentaire de l’écrevisse de Louisiane ?
+                    <ul class="questions">
+                        <li><input type="radio" id="q3a" name="q3" value="a">
+                            <label for="q3a" class="btn_radio">Herbivore strict</label></li>
+                        <li><input type="radio" id="q3b" name="q3" value="b">
+                            <label for="q3b" class="btn_radio">Omnivore à tendance carnivore</label></li>
+                        <li><input type="radio" id="q3c" name="q3" value="c">
+                            <label for="q3c" class="btn_radio">Insectivore uniquement</label></li>
+                    </ul>
+                </li>
+
+                <li>Combien d’œufs une femelle peut-elle pondre ?
+                    <ul class="questions">
+                        <li><input type="radio" id="q4a" name="q4" value="a">
+                            <label for="q4a" class="btn_radio">Entre 10 et 50</label></li>
+                        <li><input type="radio" id="q4b" name="q4" value="b">
+                            <label for="q4b" class="btn_radio">Entre 100 et 500</label></li>
+                        <li><input type="radio" id="q4c" name="q4" value="c">
+                            <label for="q4c" class="btn_radio">Plus de 1000</label></li>
+                    </ul>
+                </li>
+            </ol>
+        </fieldset>
+    </form>
+
+    <form>
+        <fieldset class="box">
+            <legend>Comment pouvez-vous agir ?</legend>
+            <div class="grid">
+                <div class="item">
+                    <label for="s1">Transporter des écrevisses vivantes est interdit :</label>
+                    <select id="s1" name="s1" required>
+                        <option value="" disabled selected>----</option>
+                        <option value="true">Vrai</option>
+                        <option value="false">Faux</option>
+                    </select>
+                </div>
+                <div class="item">
+                    <label for="s2">L’écrevisse de Louisiane favorise la biodiversité :</label>
+                    <select id="s2" name="s2" required>
+                        <option value="" disabled selected>----</option>
+                        <option value="true">Vrai</option>
+                        <option value="false">Faux</option>
+                    </select>
+                </div>
+                <div class="item">
+                    <label for="s3">On peut la retrouver dans des zones agricoles comme les rizières :</label>
+                    <select id="s3" name="s3" required>
+                        <option value="" disabled selected>----</option>
+                        <option value="true">Vrai</option>
+                        <option value="false">Faux</option>
+                    </select>
+                </div>
+            </div>
+        </fieldset>
+    </form>
+
+    <form>
+        <fieldset class="box">
+            <legend>Mes résolutions</legend>
+            <textarea id="resolutions" name="resolutions" placeholder="Quelles actions concrètes pouvez-vous prendre pour limiter la prolifération des espèces envahissantes comme l’écrevisse de Louisiane ?"></textarea>
+        </fieldset>
+    </form>
+
+    <div>
+        <button type="submit" onclick="submitQuiz()" class="envoi">Envoyer</button>
+    </div>
+
+    <main class="box">
+        <table class="table_res" id="result">
+            <caption>Résultats du Quiz</caption>
+            <thead>
+                <tr>
+                    <th>Essai</th>
+                    <th>Score</th>
+                </tr>
+            </thead>
+            <tbody></tbody>
+        </table>
+    </main>
+
+        <div class="bubbles">
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+            <div class="bubble"></div>
+        </div>
+  <footer>
+    <p>©2025 groupe G - Elodie Maelys</p>
+    <p>Projet de web</p>
+    <a href="../html/apropos.html">A propos</a>
+  </footer>
+    </main>
+</body>
+</html>
+<script>
+    window.onload = function() {
+        alert("Vous pouvez commencer le quiz! Attention, vous n'avez que 3 essais.")
+    }
+ </script>

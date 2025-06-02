@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <title>châtrer l'écrevisse</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Jeu</title>
+        <link rel="stylesheet" type="text/css" href="../css/style.css">
+        <script type="text/javascript" src="../js/jeu.js" defer></script>
+
+    </head>
+    <body>
+        <header>
+            <div class="top-header">
+                <img class="logo" src="../img/heroictoken_1.png" alt="logo">
+            </div>
+            <p id="titre" color="white" >Chatrer l’Ecrevisse</p>
+            <nav class="bande">
+                <a href="accueil.html">accueil</a>
+                <a href="quiz.html">quiz</a>
+                <a href="jeu.html">jeu</a>
+                <a href="apropos.html">a propos</a>
+            </nav>
+        </header> 
+        <main>
+            <div class="detail">
+            <h1>Jouons à châtrer l'écrevisse !</h1>
+            <p>Vous avez appris comment éliminer les écrevisses de Louisiane : il faut les châtrer ! 
+                Lancez le jeu et préparez-vous à capturer toutes les écrevisses pour les châtrer. 
+                Attention, il ne faut en laisser aucune sinon elles continueront à proliférer !
+            </p>
+        </div>
+        <div>
+            <button type="button" onclick="theGame()" class="envoi">Jouer</button>
+        </div>
+
+        <!--<main>-->
+        <div class="detail">
+            <div id="ecranGame"></div>
+            <p id="score">Score : 0</p>
+            <p id="timer">Temps restant : 60</p>
+        </div>  
+            <table id="recapScore" style="margin: auto; margin-top: 20px; display: none;">
+                <caption>Résultat de votre chasse</caption>
+                <thead>
+                    <tr>
+                        <th>Écrevisses châtrer</th>
+                        <th>Écrevisses apparues</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td id="chatrer"></td>
+                        <td id="pop"></td>
+                        </tr>
+                </tbody>
+            </table>
+        <!--</main>-->
+
+  <div class="bubbles">
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+    <div class="bubble"></div>
+  </div>
+  <footer>
+    <p>©2025 groupe G - Elodie Maelys</p>
+    <p>Projet de web</p>
+    <a href="../html/apropos.html">A propos</a>
+  </footer>
+    </main>
+    </body>
+</html>
