@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="fr">
     <head>
-        <title>châtrer l'écrevisse</title>
         <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Quiz</title>
         <link rel="stylesheet" type="text/css" href="../css/style.css">
+        <script src="../js/quiz.js" defer></script>
     </head>
     <body>
         <header>
             <div class="top-header">
                 <img class="logo" src="../img/heroictoken_1.png" alt="logo">
             </div>
-            <p id="titre" color="white" >Chatrer l’Ecrevisse</p>
+            <p id="titre">Châtrer l’Ecrevisse</p>
                
             <nav class="bande">
                 <a href="accueil.html">accueil</a>
@@ -118,7 +118,7 @@
         <button type="submit" onclick="submitQuiz()" class="envoi">Envoyer</button>
     </div>
 
-    <main class="box">
+    <form class="box">
         <table class="table_res" id="result">
             <caption>Résultats du Quiz</caption>
             <thead>
@@ -129,7 +129,7 @@
             </thead>
             <tbody></tbody>
         </table>
-    </main>
+    </form>
 
         <div class="bubbles">
             <div class="bubble"></div>
@@ -151,10 +151,10 @@
     <a href="../html/apropos.html">A propos</a>
   </footer>
     </main>
-</body>
-</html>
 <script>
     window.onload = function() {
         alert("Vous pouvez commencer le quiz! Attention, vous n'avez que 3 essais.")
     }
  </script>
+</body>
+</html>

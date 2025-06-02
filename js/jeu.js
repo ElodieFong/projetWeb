@@ -1,4 +1,3 @@
-
 var score = 0;
 var totalPop = 0;
 var minuteur = 60;
@@ -11,40 +10,44 @@ const timerDisplay = document.getElementById("timer");
 
 const louisiIMG = "../img/chatrer_louisi.png";
 
-var louisiEst = null; 
 
 //faire apparaitre les louisi (oui, j'ai donner un surnom a l'ecrevisse)
 function spawnLouisi(){
-    // Si louisi existe déjà, on la delete
-    if (louisiEst) {
-        ecran.removeChild(louisiEst);
-    }
 
-    // new image
-    louisiEst = document.createElement("img");
-    louisiEst.src = louisiIMG;
-    louisiEst.classList.add("ecrevisse");
+  // new image
+  const louisi = document.createElement("img");
+  louisi.src = louisiIMG;
+  louisi.classList.add("ecrevisse");
 
-    // Position aléatoire
-    const maxX = ecran.clientWidth - 60;
-    const maxY = ecran.clientHeight - 60;
+  // Position aléatoire
+  const maxX = ecran.clientWidth - 60;
+  const maxY = ecran.clientHeight - 60;
 
-    const x = Math.random() * maxX;
-    const y = Math.random() * maxY;
+  const x = Math.random() * maxX;
+  const y = Math.random() * maxY;
 
-    louisiEst.style.left = `${x}px`;
-    louisiEst.style.top = `${y}px`;
+  louisi.style.left = `${x}px`;
+  louisi.style.top = `${y}px`;
 
-    // +1 louisi
-    ecran.appendChild(louisiEst);
-    totalPop++;
+  // +1 louisi
+  ecran.appendChild(louisi);
+  totalPop++;
 
-    // clic - death
-    louisiEst.onclick = () => {
+  // clic - death
+  louisi.onclick = () => {
     score++;
     scoreDisplay.textContent = "Score : " + score;
-    spawnLouisi();
+    if (ecran.contains(louisi)) {
+      ecran.removeChild(louisi);
+    }
   };
+
+   // delete au bout de 1sec si pas mort
+  setTimeout(() => {
+    if (ecran.contains(louisi)) {
+      ecran.removeChild(louisi);
+    }
+  }, 1000);
 }
 
 function updateTimer() {
@@ -53,7 +56,8 @@ function updateTimer() {
   if (minuteur <= 0) {
     clearInterval(interval);
     clearInterval(countdown);
-    if (louisiEst) ecran.removeChild(louisiEst);
+  
+
     const recap = document.getElementById("recapScore");
     const capt = document.getElementById("chatrer");
     const pop = document.getElementById("pop");
@@ -63,16 +67,19 @@ function updateTimer() {
     pop.textContent = totalPop;
 
     alert("Game Over");
+    document.querySelector("button[onclick='theGame()']").disabled = false;
+
   }
 }
 
 function theGame(){
     alert("Le jeu commence !");
+    
+document.querySelector("button[onclick='theGame()']").disabled = true;
     score = 0;
     minuteur = 60;
     scoreDisplay.textContent = "Score : 0";
     timerDisplay.textContent = "temps restant : 60";
-    alert("c'est ou que ca coince");
     spawnLouisi();
     interval = setInterval(function(){spawnLouisi();}, 1000);
     countdown = setInterval(updateTimer, 1000);

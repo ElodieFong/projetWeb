@@ -174,7 +174,7 @@ footer .socials span {
 
 
 
-h1 {
+h1, h2 {
   text-align: center;
 }
 
@@ -274,7 +274,7 @@ legend {
 #ecranGame {
   width: auto;
   height: 400px;
-  background-color: #cceeff;
+  background: linear-gradient(to top, #d7940f 2%, #e2d710 8%, #0a97d8 2%, #05ced9 95%);
   position: relative;
   margin: 20px auto;
   border: 2px solid black;
@@ -313,6 +313,12 @@ legend {
 
 #aPropos .left{
   text-align: right;
+}
+
+.vid, iframe{
+  display: flex;
+  justify-content: center;
+  border: none;
 }
 
 
